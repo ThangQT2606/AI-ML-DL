@@ -38,7 +38,8 @@ def plot_classification_results(y_test, y_pred, _score):
             plt.text(j, i, str(cm[i, j]), horizontalalignment='center', color='white' if cm[i, j] > cm.max() / 2 else 'black')
     st.pyplot(fig, bbox_inches='tight')
 
-if __name__ == '__main__':
+
+def build_model():
     df = pd.read_csv("loan_data.csv")
     df_iqr = df.copy()
     noise = ['int.rate','installment', 'log.annual.inc', 'fico', 'days.with.cr.line', 'revol.bal', 'inq.last.6mths']
@@ -67,3 +68,8 @@ if __name__ == '__main__':
     _score = model.score(x_test, y_test)
     y_pred = model.predict(x_test)
     plot_classification_results(y_test, y_pred, _score)
+
+
+if __name__ == '__main__':
+    build_model()
+    

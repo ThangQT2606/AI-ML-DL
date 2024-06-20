@@ -1,1 +1,0 @@
-{"type": "ObjectDetectionPrediction", "predictions": {"res_1": {"score": 0.8246759176254272, "labelName": "license plate", "coordinates": {"xmin": 326, "ymin": 172, "xmax": 477, "ymax": 202}}}}
